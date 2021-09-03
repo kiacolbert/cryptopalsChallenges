@@ -23,5 +23,20 @@ func main() {
 		fmt.Printf("incorrect")
 	}
 	fmt.Printf("correct: %v\n", sixFourString)
+	
+	ans := getXor(hexBytes, hexBytes)
+	fmt.Println("ans", ans)
 
+}
+
+// Write a function that takes two equal-length buffers and produces their XOR combination.
+func getXor(a []byte, b []byte) []byte {
+	if len(a) != len(b) {
+		return nil;
+	}
+	res := make([]byte, len(a))
+	for i := range(a) {
+		res[i] = a[i] ^ b[i]
+	}
+	return res
 }
