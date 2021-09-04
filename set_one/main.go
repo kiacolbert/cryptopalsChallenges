@@ -17,8 +17,7 @@ func main() {
 	}
 	fmt.Printf("correct: %v\n", sixFourString)
 
-	ans := getXor(hexBytes, hexBytes)
-	fmt.Println("ans", ans)
+}
 
 func GetBase64StringFromHexString(hexString string) string{
 	hexBytes, err := hex.DecodeString(hexString) // decode string into hex byte array
@@ -29,7 +28,7 @@ func GetBase64StringFromHexString(hexString string) string{
 }
 
 // Write a function that takes two equal-length buffers and produces their XOR combination.
-func getXor(a []byte, b []byte) []byte {
+func GetXor(a, b []byte) []byte {
 	if len(a) != len(b) {
 		return nil;
 	}
